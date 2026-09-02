@@ -23,6 +23,8 @@ import { ScrollEffects } from './scroll-effects';
 
 const WAZE_URL =
   'https://www.waze.com/ul?q=%D7%A4%D7%90%D7%A8%D7%A7%20%D7%A0%D7%97%D7%9C%20%D7%91%D7%90%D7%A8%20%D7%A9%D7%91%D7%A2&navigate=yes';
+const MAPS_URL =
+  'https://www.google.com/maps/search/?api=1&query=%D7%A4%D7%90%D7%A8%D7%A7%20%D7%A0%D7%97%D7%9C%20%D7%91%D7%90%D7%A8%20%D7%A9%D7%91%D7%A2';
 const ICS_URL = '/event/sukkot-baagam.ics';
 
 const vars = (v: Record<string, string | number>) => v as CSSProperties;
@@ -127,7 +129,7 @@ export default function Home() {
               src="/event/event-title.webp"
               alt="סוכות באגם"
               width={1200}
-              height={856}
+              height={738}
               priority
             />
             <span>באר שבע · 29.9</span>
@@ -146,7 +148,7 @@ export default function Home() {
             </a>
             <a
               className="btn btn--primary btn--sm hide-mobile"
-              href={WAZE_URL}
+              href={MAPS_URL}
               target="_blank"
               rel="noreferrer"
             >
@@ -178,7 +180,7 @@ export default function Home() {
                   src="/event/event-title.webp"
                   alt="אירוע סוכות באגם"
                   width={1200}
-                  height={856}
+                  height={738}
                   priority
                 />
               </h1>
@@ -208,8 +210,18 @@ export default function Home() {
               </ul>
 
               <div className="hero-actions">
+                {/* desktop opens Google Maps, phones keep Waze */}
                 <a
-                  className="btn btn--primary"
+                  className="btn btn--primary hide-mobile"
+                  href={MAPS_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Navigation aria-hidden="true" />
+                  ניווט לפארק
+                </a>
+                <a
+                  className="btn btn--primary hide-desktop"
                   href={WAZE_URL}
                   target="_blank"
                   rel="noreferrer"
@@ -262,7 +274,7 @@ export default function Home() {
                   על הבמה
                 </p>
                 <h2 id="lineup-title" className="section-title">
-                  כוכבים שהילדים מכירים.
+                  כוכבים שהילדים אוהבים.
                 </h2>
               </header>
 
@@ -441,7 +453,16 @@ export default function Home() {
             </p>
             <div className="finale-actions">
               <a
-                className="btn btn--yellow"
+                className="btn btn--yellow hide-mobile"
+                href={MAPS_URL}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Navigation aria-hidden="true" />
+                ניווט לפארק
+              </a>
+              <a
+                className="btn btn--yellow hide-desktop"
                 href={WAZE_URL}
                 target="_blank"
                 rel="noreferrer"

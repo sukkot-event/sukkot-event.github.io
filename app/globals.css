@@ -148,10 +148,6 @@ button {
   margin-inline: auto;
 }
 
-.hide-mobile {
-  display: inline-flex;
-}
-
 /* =====================================================================
    Buttons
    ===================================================================== */
@@ -506,7 +502,8 @@ button {
 }
 
 .cast-miki {
-  inset-inline-end: 0;
+  /* past the column edge, so she overlaps the pups less */
+  inset-inline-end: -17%;
   height: 100%;
   animation: rise 1s 0.2s var(--ease) both;
 }
@@ -678,7 +675,7 @@ button {
   position: absolute;
   z-index: 1;
   bottom: 0;
-  inset-inline-end: -8%;
+  inset-inline-end: -2%;
   width: auto;
   height: 94%;
   filter: drop-shadow(0 18px 26px rgb(0 0 0 / 28%));
@@ -686,7 +683,7 @@ button {
 }
 
 .star-figure--paw {
-  inset-inline-end: -4%;
+  inset-inline-end: 0;
   height: 84%;
 }
 
@@ -1038,6 +1035,17 @@ button {
 /* =====================================================================
    Responsive
    ===================================================================== */
+/* =====================================================================
+   Responsive helpers (after the components so they win the cascade)
+   ===================================================================== */
+.hide-mobile {
+  display: inline-flex;
+}
+
+.hide-desktop {
+  display: none;
+}
+
 @media (max-width: 1100px) {
   .header-nav {
     display: none;
@@ -1105,6 +1113,10 @@ button {
 
   .hide-mobile {
     display: none;
+  }
+
+  .hide-desktop {
+    display: inline-flex;
   }
 
   .header-inner {
