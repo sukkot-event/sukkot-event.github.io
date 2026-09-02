@@ -282,11 +282,11 @@ export default function Home() {
                 <article
                   className="star-card star-card--miki"
                   data-reveal
-                  style={vars({ '--i': 0 })}
                 >
                   <div className="star-logo">
                     <Image
                       src="/event/miki-logo.webp"
+                      loading="eager"
                       alt="מיקי"
                       width={1200}
                       height={751}
@@ -295,6 +295,7 @@ export default function Home() {
                   <Image
                     className="star-figure"
                     src="/event/miki-cutout.webp"
+                    loading="eager"
                     alt=""
                     width={1000}
                     height={1374}
@@ -316,11 +317,11 @@ export default function Home() {
                 <article
                   className="star-card star-card--paw"
                   data-reveal
-                  style={vars({ '--i': 1 })}
                 >
                   <div className="star-logo">
                     <Image
                       src="/event/paw-patrol-logo.webp"
+                      loading="eager"
                       alt="מפרץ ההרפתקאות"
                       width={900}
                       height={854}
@@ -329,6 +330,7 @@ export default function Home() {
                   <Image
                     className="star-figure star-figure--paw"
                     src="/event/paw-patrol-cutout.webp"
+                    loading="eager"
                     alt=""
                     width={963}
                     height={1317}
@@ -371,13 +373,12 @@ export default function Home() {
 
               <ul className="act-grid">
                 {activities.map(
-                  ({ title, text, Icon, tint, chip, chipInk, wide }, i) => (
+                  ({ title, text, Icon, tint, chip, chipInk, wide }) => (
                     <li
                       key={title}
                       className={`act-card${wide ? ' act-card--wide' : ''}`}
                       data-reveal
                       style={vars({
-                        '--i': i % 3,
                         '--tint': tint,
                         '--chip': chip,
                         '--chip-ink': chipInk ?? '#fff',
@@ -421,12 +422,12 @@ export default function Home() {
               </header>
 
               <ul className="know-list">
-                {goodToKnow.map(({ title, text, Icon, tint, color }, i) => (
+                {goodToKnow.map(({ title, text, Icon, tint, color }) => (
                   <li
                     key={title}
                     className="know-item"
                     data-reveal
-                    style={vars({ '--i': i, '--tint': tint, '--chip': color })}
+                    style={vars({ '--tint': tint, '--chip': color })}
                   >
                     <span className="know-icon" aria-hidden="true">
                       <Icon />
