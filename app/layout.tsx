@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     // WhatsApp wants a JPEG/PNG under ~300KB at 1200×630
     images: [
       {
-        url: '/og.jpg',
+        url: '/og-v2.jpg',
         width: 1200,
         height: 630,
         type: 'image/jpeg',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'סוכות באגם | יוצאים לשחק',
     description: '29.9 · 10:00–14:00 · פארק נחל באר שבע · הכניסה חופשית',
-    images: ['/og.jpg'],
+    images: ['/og-v2.jpg'],
   },
 };
 
