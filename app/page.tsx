@@ -237,10 +237,6 @@ export default function Home() {
             </div>
 
             <div className="hero-cast" aria-hidden="true">
-              <span className="cast-chip">
-                <Sparkles />
-                על הבמה: מיקי ומפרץ ההרפתקאות
-              </span>
               <Image
                 className="cast-miki"
                 src="/event/miki-cutout.webp"
