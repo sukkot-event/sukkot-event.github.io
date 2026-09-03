@@ -3,11 +3,11 @@
 import { useEffect } from 'react';
 
 /** gap between items that enter the viewport together */
-const STAGGER_MS = 70;
+const STAGGER_MS = 120;
 /** never let a stagger grow past this many steps, however many items land at once */
-const STAGGER_MAX_STEPS = 4;
-/** reveal transition (700ms) + the longest stagger, with headroom */
-const SETTLE_FALLBACK_MS = 1200;
+const STAGGER_MAX_STEPS = 6;
+/** reveal transition (1100ms) + the longest stagger (720ms), with headroom */
+const SETTLE_FALLBACK_MS = 2100;
 
 /**
  * Progressive enhancement only:
@@ -81,7 +81,7 @@ export function ScrollEffects() {
             observer?.unobserve(entry.target);
           }
         },
-        { rootMargin: '0px 0px -6% 0px', threshold: 0.1 },
+        { rootMargin: '0px 0px -4% 0px', threshold: 0.1 },
       );
       for (const el of targets) {
         if (!el.classList.contains('is-visible')) observer.observe(el);

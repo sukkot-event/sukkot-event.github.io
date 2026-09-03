@@ -265,7 +265,7 @@ export default function Home() {
             aria-labelledby="lineup-title"
           >
             <div className="container">
-              <header className="section-head" data-reveal>
+              <header className="section-head" data-reveal="sequence">
                 <p className="eyebrow" style={vars({ '--dot': 'var(--pink)' })}>
                   על הבמה
                 </p>
@@ -355,7 +355,7 @@ export default function Home() {
             aria-labelledby="activities-title"
           >
             <div className="container">
-              <header className="section-head" data-reveal>
+              <header className="section-head" data-reveal="sequence">
                 <p className="eyebrow" style={vars({ '--dot': 'var(--teal)' })}>
                   מה קורה במתחם
                 </p>
@@ -399,7 +399,7 @@ export default function Home() {
             aria-labelledby="know-title"
           >
             <div className="container know">
-              <header className="section-head know-head" data-reveal>
+              <header className="section-head know-head" data-reveal="sequence">
                 <p className="eyebrow" style={vars({ '--dot': 'var(--orange)' })}>
                   טוב לדעת
                 </p>
@@ -441,7 +441,7 @@ export default function Home() {
 
         {/* Finale -------------------------------------------------------- */}
         <section className="finale" aria-labelledby="finale-title">
-          <div className="container finale-inner" data-reveal>
+          <div className="container finale-inner" data-reveal="sequence">
             <h2 id="finale-title">נתראה באגם.</h2>
             <p className="finale-meta">
               יום שלישי <span dir="ltr">29.9</span> ·{' '}
