@@ -377,6 +377,8 @@ button {
 .hero-copy {
   position: relative;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
   align-self: center;
   max-width: 600px;
   padding-block: 32px clamp(36px, 6vh, 72px);
@@ -492,19 +494,17 @@ button {
   animation-delay: 1.6s;
 }
 
-/* the partners close the copy column: a hairline and the same lockup the
-   footer uses, arriving as the last beat before the cast */
+/* the partners open the copy column: a small lockup above the title, the same
+   card the footer uses, arriving with the header as the first beat */
 .hero-partners {
   display: flex;
-  align-items: center;
-  margin-top: 30px;
-  padding-top: 20px;
-  border-top: 1px solid var(--line);
-  animation: enter-up 1s 1.75s var(--ease-enter) both;
+  order: -1;
+  margin-bottom: 22px;
+  animation: enter-up 1s 0.2s var(--ease-enter) both;
 }
 
 .hero-partners img {
-  width: min(256px, 100%);
+  width: min(196px, 100%);
   height: auto;
   filter: drop-shadow(0 8px 18px rgb(18 49 61 / 10%));
 }
@@ -1273,10 +1273,7 @@ button {
     padding-top: 40px;
   }
 
-  /* a column, so the partners can lead the copy without touching the markup */
   .hero-copy {
-    display: flex;
-    flex-direction: column;
     padding-top: 18px;
     text-align: center;
   }
@@ -1315,14 +1312,9 @@ button {
     font-size: 0.95rem;
   }
 
-  /* on phones the lockup opens the page, a small badge above the title */
   .hero-partners {
-    order: -1;
     justify-content: center;
-    margin: 0 0 18px;
-    padding-top: 0;
-    border-top: 0;
-    animation-delay: 0.2s;
+    margin-bottom: 18px;
   }
 
   .hero-partners img {
