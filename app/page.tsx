@@ -234,6 +234,16 @@ export default function Home() {
                   הוספה ליומן
                 </a>
               </div>
+
+              <div className="hero-partners">
+                <Image
+                  src="/event/sponsors.webp"
+                  alt="עיריית באר שבע וקרן קיימת לישראל"
+                  width={1600}
+                  height={480}
+                  priority
+                />
+              </div>
             </div>
 
             <div className="hero-cast" aria-hidden="true">

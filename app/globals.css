@@ -492,6 +492,23 @@ button {
   animation-delay: 1.6s;
 }
 
+/* the partners close the copy column: a hairline and the same lockup the
+   footer uses, arriving as the last beat before the cast */
+.hero-partners {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  animation: enter-up 1s 1.75s var(--ease-enter) both;
+}
+
+.hero-partners img {
+  width: min(256px, 100%);
+  height: auto;
+  filter: drop-shadow(0 8px 18px rgb(18 49 61 / 10%));
+}
+
 .hero-cast {
   position: relative;
   z-index: 1;
@@ -1256,7 +1273,10 @@ button {
     padding-top: 64px;
   }
 
+  /* a column, so the partners can lead the copy without touching the markup */
   .hero-copy {
+    display: flex;
+    flex-direction: column;
     text-align: center;
   }
 
@@ -1292,6 +1312,20 @@ button {
   .hero-actions .btn {
     padding-inline: 14px;
     font-size: 0.95rem;
+  }
+
+  /* on phones the lockup opens the page, a small badge above the title */
+  .hero-partners {
+    order: -1;
+    justify-content: center;
+    margin: 0 0 18px;
+    padding-top: 0;
+    border-top: 0;
+    animation-delay: 0.2s;
+  }
+
+  .hero-partners img {
+    width: min(180px, 100%);
   }
 
   .hero-cast {
