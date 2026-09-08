@@ -1270,13 +1270,14 @@ button {
   }
 
   .hero-inner {
-    padding-top: 64px;
+    padding-top: 40px;
   }
 
   /* a column, so the partners can lead the copy without touching the markup */
   .hero-copy {
     display: flex;
     flex-direction: column;
+    padding-top: 18px;
     text-align: center;
   }
 
