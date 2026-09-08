@@ -303,6 +303,21 @@ button {
   white-space: nowrap;
 }
 
+.header-start {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: none;
+}
+
+/* the partners ride along with the brand, same hairline rhythm as the date */
+.header-partners {
+  width: auto;
+  height: 42px;
+  padding-inline-start: 14px;
+  border-inline-start: 1px solid var(--line);
+}
+
 .header-nav {
   display: flex;
   gap: 4px;
@@ -377,8 +392,6 @@ button {
 .hero-copy {
   position: relative;
   z-index: 2;
-  display: flex;
-  flex-direction: column;
   align-self: center;
   max-width: 600px;
   padding-block: 32px clamp(36px, 6vh, 72px);
@@ -494,17 +507,14 @@ button {
   animation-delay: 1.6s;
 }
 
-/* the partners open the copy column: a small lockup above the title, the same
-   card the footer uses, arriving with the header as the first beat */
+/* on desktop the partners sit in the header; phones show them here instead,
+   a small badge above the title (see the phone rules) */
 .hero-partners {
-  display: flex;
-  order: -1;
-  margin-bottom: 22px;
-  animation: enter-up 1s 0.2s var(--ease-enter) both;
+  display: none;
 }
 
 .hero-partners img {
-  width: min(196px, 100%);
+  width: min(180px, 100%);
   height: auto;
   filter: drop-shadow(0 8px 18px rgb(18 49 61 / 10%));
 }
@@ -1233,7 +1243,8 @@ button {
     height: 44px;
   }
 
-  .brand span {
+  .brand span,
+  .header-partners {
     display: none;
   }
 
@@ -1273,7 +1284,10 @@ button {
     padding-top: 40px;
   }
 
+  /* a column, so the partners can lead the copy without touching the markup */
   .hero-copy {
+    display: flex;
+    flex-direction: column;
     padding-top: 18px;
     text-align: center;
   }
@@ -1312,13 +1326,13 @@ button {
     font-size: 0.95rem;
   }
 
+  /* the lockup opens the page on phones, first beat before the title */
   .hero-partners {
+    display: flex;
+    order: -1;
     justify-content: center;
     margin-bottom: 18px;
-  }
-
-  .hero-partners img {
-    width: min(180px, 100%);
+    animation: enter-up 1s 0.2s var(--ease-enter) both;
   }
 
   .hero-cast {

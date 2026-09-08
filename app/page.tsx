@@ -124,16 +124,27 @@ export default function Home() {
 
       <header className="site-header">
         <div className="container header-inner">
-          <a className="brand" href="#top" aria-label="סוכות באגם, לראש העמוד">
+          <div className="header-start">
+            <a className="brand" href="#top" aria-label="סוכות באגם, לראש העמוד">
+              <Image
+                src="/event/event-title.webp"
+                alt="סוכות באגם"
+                width={1200}
+                height={738}
+                priority
+              />
+              <span>באר שבע · 29.9</span>
+            </a>
+            {/* desktop only; phones show the lockup in the hero instead */}
             <Image
-              src="/event/event-title.webp"
-              alt="סוכות באגם"
-              width={1200}
-              height={738}
+              className="header-partners"
+              src="/event/sponsors.webp"
+              alt="עיריית באר שבע וקרן קיימת לישראל"
+              width={1600}
+              height={480}
               priority
             />
-            <span>באר שבע · 29.9</span>
-          </a>
+          </div>
 
           <nav className="header-nav" aria-label="ניווט ראשי">
             <a href="#lineup">על הבמה</a>
