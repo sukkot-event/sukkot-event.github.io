@@ -9,12 +9,14 @@ import {
   Clock3,
   Drum,
   Gamepad2,
+  Gift,
   MapPin,
   Navigation,
   Palette,
   PartyPopper,
   Popcorn,
   Puzzle,
+  ShoppingBag,
   Sparkles,
   Sun,
   Ticket,
@@ -74,7 +76,6 @@ const activities = [
     Icon: PartyPopper,
     tint: 'var(--tint-green)',
     chip: 'var(--green)',
-    wide: true,
   },
   {
     title: 'דוכני מכירה של אוכל',
@@ -82,7 +83,13 @@ const activities = [
     Icon: Popcorn,
     tint: 'var(--tint-blue)',
     chip: 'var(--blue)',
-    wide: true,
+  },
+  {
+    title: 'דוכן הסקוושים',
+    text: 'דוכן מכירה של מלכת הסקוושים במתחם.',
+    Icon: ShoppingBag,
+    tint: 'var(--tint-lilac)',
+    chip: 'var(--lilac)',
   },
 ];
 
@@ -365,7 +372,48 @@ export default function Home() {
                     </span>
                   </div>
                 </article>
+
+                <article
+                  className="star-card star-card--shilat"
+                  data-reveal
+                >
+                  <div className="star-logo star-logo--text">מלכת הסקוושים</div>
+                  <Image
+                    className="star-figure star-figure--shilat"
+                    src="/event/shilat-cutout.webp"
+                    loading="eager"
+                    alt=""
+                    width={825}
+                    height={1300}
+                    aria-hidden="true"
+                  />
+                  <div className="star-text">
+                    <h3>שילת</h3>
+                    <p>
+                      מלכת הסקוושים מצטרפת לכוכבי האירוע, ובמתחם מחכה דוכן
+                      מכירה של הסקוושים שלה.
+                    </p>
+                    <span className="star-tag">
+                      <ShoppingBag aria-hidden="true" />
+                      דוכן מכירה במתחם
+                    </span>
+                  </div>
+                  {/* the gift: a small note, the details live in the fine print */}
+                  <p className="star-gift">
+                    <Gift aria-hidden="true" />
+                    <span>
+                      <strong>1,000 סקוושים במתנה*</strong>
+                      ל־1,000 הילדים והילדות הראשונים במתחם האירוע
+                    </span>
+                  </p>
+                </article>
               </div>
+
+              <p className="fine-print" data-reveal>
+                * המתנה תחולק ל־1,000 המשתתפים הראשונים בלבד, בכפוף למלאי
+                הקיים במקום האירוע. מתנה אחת למשתתף. חלוקת המתנות תתבצע עד
+                גמר המלאי.
+              </p>
             </div>
           </section>
 
@@ -384,7 +432,7 @@ export default function Home() {
                   id="activities-title"
                   className="section-title section-title--sm"
                 >
-                  שבעה מתחמים פתוחים לקטנטנים ולכל המשפחה.
+                  שמונה מתחמים פתוחים לקטנטנים ולכל המשפחה.
                 </h2>
               </header>
 

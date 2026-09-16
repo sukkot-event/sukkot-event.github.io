@@ -20,6 +20,7 @@
   --blue: #2f8fcb;
   --blue-deep: #1c6fb5;
   --purple: #7b3fa0;
+  --lilac: #b05cc4;
   --sky: #dcefff;
 
   /* neutrals */
@@ -39,6 +40,7 @@
   --tint-orange: #ffe7d3;
   --tint-green: #e8f6da;
   --tint-blue: #dfeffc;
+  --tint-lilac: #f2e3f7;
 
   /* type */
   --font:
@@ -665,6 +667,24 @@ button {
   background: linear-gradient(165deg, #55b6ee 0%, var(--blue) 50%, var(--blue-deep) 100%);
 }
 
+/* the third star takes a full row under the first two */
+.star-card--shilat {
+  grid-column: 1 / -1;
+  min-height: 440px;
+  background: linear-gradient(165deg, #d78fe3 0%, var(--lilac) 50%, var(--purple) 100%);
+}
+
+.star-card--shilat .star-figure {
+  /* stands beside the copy rather than in the far corner of the wide card */
+  inset-inline-end: 26%;
+  height: 96%;
+}
+
+.star-card--shilat .star-text {
+  max-width: 46%;
+  padding-top: 24px;
+}
+
 .star-card::before {
   content: '';
   position: absolute;
@@ -702,6 +722,15 @@ button {
 .star-logo img {
   width: auto;
   height: 56px;
+}
+
+/* a wordmark where there is no logo artwork */
+.star-logo--text {
+  padding: 16px 18px;
+  color: var(--lilac);
+  font-size: 1.0625rem;
+  font-weight: 900;
+  line-height: 1;
 }
 
 .star-figure {
@@ -766,6 +795,46 @@ button {
 .star-tag svg {
   width: 15px;
   height: 15px;
+}
+
+/* the gift note: a small paper tag, deliberately quieter than the card */
+.star-gift {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 12px;
+  margin-top: 16px;
+  padding: 10px 14px;
+  border-radius: var(--r-md);
+  background: var(--cream);
+  color: var(--ink-2);
+  box-shadow: var(--shadow-sm);
+  font-size: 0.8125rem;
+  line-height: 1.35;
+  transform: rotate(-1.5deg);
+}
+
+.star-gift svg {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  color: var(--pink);
+}
+
+.star-gift strong {
+  display: block;
+  color: var(--ink);
+  font-size: 0.9375rem;
+  font-weight: 800;
+}
+
+.fine-print {
+  margin-top: 18px;
+  color: var(--ink-soft);
+  font-size: 0.8125rem;
+  line-height: 1.5;
 }
 
 /* ---------------- Activities ---------------- */
@@ -1207,6 +1276,10 @@ button {
     min-height: 460px;
   }
 
+  .star-card--shilat .star-figure {
+    inset-inline-end: 4%;
+  }
+
   .act-card,
   .act-card--wide {
     grid-column: span 3;
@@ -1385,9 +1458,46 @@ button {
     transform: none;
   }
 
-  .star-text {
+  .star-card--shilat .star-figure {
+    inset-inline-end: 14px;
+    height: 224px;
+  }
+
+  .star-text,
+  .star-card--shilat .star-text {
     max-width: 46%;
     padding-top: 12px;
+  }
+
+  .star-logo--text {
+    padding: 11px 12px;
+    font-size: 0.875rem;
+  }
+
+  /* the note moves to the free corner above her head */
+  .star-gift {
+    position: absolute;
+    top: 14px;
+    inset-inline-end: 14px;
+    max-width: 200px;
+    margin: 0;
+    padding: 8px 10px;
+    gap: 8px;
+    font-size: 0.72rem;
+    line-height: 1.25;
+  }
+
+  .star-gift svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .star-gift strong {
+    font-size: 0.8125rem;
+  }
+
+  .fine-print {
+    font-size: 0.75rem;
   }
 
   .star-text h3 {
