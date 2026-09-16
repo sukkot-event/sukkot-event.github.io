@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
   title: 'סוכות באגם | יוצאים לשחק בפארק נחל באר שבע · 29.9',
   description:
-    'ארבע שעות של מופעי ילדים, משחקים, יצירה וקצב בפארק נחל באר שבע. יום שלישי 29.9, 10:00–14:00, הכניסה חופשית. על הבמה: מיקי ומפרץ ההרפתקאות.',
+    'ארבע שעות של מופעי ילדים, משחקים, יצירה וקצב בפארק נחל באר שבע. יום שלישי 29.9, 10:00–14:00, הכניסה חופשית. כוכבי האירוע: מיקי, מפרץ ההרפתקאות ושילת מלכת הסקוושים.',
   openGraph: {
     title: 'סוכות באגם | יוצאים לשחק',
     description: '29.9 · 10:00–14:00 · פארק נחל באר שבע · הכניסה חופשית',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     // WhatsApp wants a JPEG/PNG under ~300KB at 1200×630
     images: [
       {
-        url: '/og-v2.jpg',
+        url: '/og-v3.jpg',
         width: 1200,
         height: 630,
         type: 'image/jpeg',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'סוכות באגם | יוצאים לשחק',
     description: '29.9 · 10:00–14:00 · פארק נחל באר שבע · הכניסה חופשית',
-    images: ['/og-v2.jpg'],
+    images: ['/og-v3.jpg'],
   },
 };
 

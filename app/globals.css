@@ -528,6 +528,7 @@ button {
   height: clamp(360px, 66vh, 640px);
 }
 
+.cast-shilat,
 .cast-miki,
 .cast-paw {
   position: absolute;
@@ -536,17 +537,26 @@ button {
   filter: drop-shadow(0 22px 28px rgb(18 49 61 / 28%));
 }
 
-.cast-miki {
-  /* past the column edge, so she overlaps the pups less */
+/* back row, far left: Shilat looks in over Miki's shoulder */
+.cast-shilat {
+  z-index: 0;
   inset-inline-end: -17%;
-  height: 100%;
+  height: 80%;
+  animation: rise 1.8s 1.7s var(--ease-enter) both;
+}
+
+.cast-miki {
+  z-index: 1;
+  inset-inline-end: 3%;
+  height: 96%;
   animation: rise 1.8s 1.55s var(--ease-enter) both;
 }
 
+/* front row: the pups group is a wide landscape cutout, so it stays low */
 .cast-paw {
   z-index: 2;
-  inset-inline-start: 0;
-  height: 78%;
+  inset-inline-start: -7%;
+  height: 47%;
   animation: rise 1.8s 1.8s var(--ease-enter) both;
 }
 
@@ -737,16 +747,17 @@ button {
   position: absolute;
   z-index: 1;
   bottom: 0;
-  inset-inline-end: -2%;
+  inset-inline-end: -6%;
   width: auto;
-  height: 94%;
+  height: 90%;
   filter: drop-shadow(0 18px 26px rgb(0 0 0 / 28%));
   transition: transform var(--dur-slow) var(--ease-out);
 }
 
 .star-figure--paw {
-  inset-inline-end: 0;
-  height: 84%;
+  /* a landscape group shot: lower and wider than the single figures */
+  inset-inline-end: -3%;
+  height: 60%;
 }
 
 /* a lift only: scaling a drop-shadowed image re-rasterises it every frame */
@@ -1259,13 +1270,18 @@ button {
     margin-top: 8px;
   }
 
+  .cast-shilat {
+    inset-inline-end: 0;
+    height: 74%;
+  }
+
   .cast-miki {
-    inset-inline-end: 4%;
+    inset-inline-end: 16%;
   }
 
   .cast-paw {
-    inset-inline-start: 4%;
-    height: 80%;
+    inset-inline-start: 6%;
+    height: 56%;
   }
 
   .star-grid {
@@ -1412,14 +1428,19 @@ button {
     height: clamp(240px, 38vh, 340px);
   }
 
-  .cast-miki {
+  .cast-shilat {
     inset-inline-end: -6%;
-    height: 96%;
+    height: 72%;
+  }
+
+  .cast-miki {
+    inset-inline-end: 10%;
+    height: 92%;
   }
 
   .cast-paw {
     inset-inline-start: -6%;
-    height: 82%;
+    height: 48%;
   }
 
   .sheet {
@@ -1447,15 +1468,24 @@ button {
   }
 
   /* fully inside the card: nothing clipped by the edge or the corner radius */
-  .star-figure,
-  .star-figure--paw {
+  .star-figure {
     bottom: 0;
-    inset-inline-end: 14px;
-    height: 240px;
+    inset-inline-end: 8px;
+    height: 224px;
+  }
+
+  .star-figure--paw {
+    inset-inline-end: 8px;
+    height: 164px;
   }
 
   .star-card:hover .star-figure {
     transform: none;
+  }
+
+  /* taller, so the gift tag sits under the badge and above her head */
+  .star-card--shilat {
+    min-height: 372px;
   }
 
   .star-card--shilat .star-figure {
@@ -1477,7 +1507,7 @@ button {
   /* the note moves to the free corner above her head */
   .star-gift {
     position: absolute;
-    top: 14px;
+    top: 64px;
     inset-inline-end: 14px;
     max-width: 200px;
     margin: 0;

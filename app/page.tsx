@@ -266,19 +266,27 @@ export default function Home() {
 
             <div className="hero-cast" aria-hidden="true">
               <Image
-                className="cast-miki"
-                src="/event/miki-cutout.webp"
+                className="cast-shilat"
+                src="/event/shilat-cutout.webp"
                 alt=""
-                width={1000}
-                height={1374}
+                width={825}
+                height={1300}
+                priority
+              />
+              <Image
+                className="cast-miki"
+                src="/event/miki-cutout-v2.webp"
+                alt=""
+                width={1228}
+                height={1400}
                 priority
               />
               <Image
                 className="cast-paw"
-                src="/event/paw-patrol-cutout.webp"
+                src="/event/paw-cutout-v2.webp"
                 alt=""
-                width={963}
-                height={1317}
+                width={1100}
+                height={925}
                 priority
               />
             </div>
@@ -318,11 +326,11 @@ export default function Home() {
                   </div>
                   <Image
                     className="star-figure"
-                    src="/event/miki-cutout.webp"
+                    src="/event/miki-cutout-v2.webp"
                     loading="eager"
                     alt=""
-                    width={1000}
-                    height={1374}
+                    width={1228}
+                    height={1400}
                     aria-hidden="true"
                   />
                   <div className="star-text">
@@ -353,11 +361,11 @@ export default function Home() {
                   </div>
                   <Image
                     className="star-figure star-figure--paw"
-                    src="/event/paw-patrol-cutout.webp"
+                    src="/event/paw-cutout-v2.webp"
                     loading="eager"
                     alt=""
-                    width={963}
-                    height={1317}
+                    width={1100}
+                    height={925}
                     aria-hidden="true"
                   />
                   <div className="star-text">
