@@ -1426,21 +1426,25 @@ button {
 
   .hero-cast {
     height: clamp(240px, 38vh, 340px);
+    /* full-bleed: the three of them share the whole phone width */
+    margin-inline: calc(-1 * var(--gutter));
   }
 
+  /* symmetric: Miki dead centre, Shilat and the pups flush to either edge */
   .cast-shilat {
-    inset-inline-end: -6%;
-    height: 72%;
+    inset-inline-end: 0;
+    height: 58%;
   }
 
   .cast-miki {
-    inset-inline-end: 10%;
-    height: 92%;
+    inset-inline: 0;
+    margin-inline: auto;
+    height: 86%;
   }
 
   .cast-paw {
-    inset-inline-start: -6%;
-    height: 48%;
+    inset-inline-start: 0;
+    height: 40%;
   }
 
   .sheet {
