@@ -552,9 +552,11 @@ button {
   animation: rise 1.8s 1.55s var(--ease-enter) both;
 }
 
-/* front row: the pups group is a wide landscape cutout, so it stays low */
+/* front row: the pups group is a wide landscape cutout, so it stays low,
+   but it stands on the sheet edge (44px overlap) so the shield is never cut */
 .cast-paw {
   z-index: 2;
+  bottom: 46px;
   inset-inline-start: -7%;
   height: 47%;
   animation: rise 1.8s 1.8s var(--ease-enter) both;
@@ -1443,6 +1445,7 @@ button {
   }
 
   .cast-paw {
+    bottom: 30px; /* the phone sheet overlaps 28px */
     inset-inline-start: 0;
     height: 40%;
   }
