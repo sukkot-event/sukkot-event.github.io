@@ -1,21 +1,30 @@
 import Image from 'next/image';
 import type { CSSProperties } from 'react';
 import {
+  Accessibility,
+  Armchair,
   ArrowUp,
   Baby,
+  Ban,
+  Bike,
   Blocks,
   CalendarDays,
   CalendarPlus,
+  CircleParking,
   Clock3,
   Drum,
+  Ear,
   Gamepad2,
   Gift,
+  Mail,
   MapPin,
   Navigation,
   Palette,
   PartyPopper,
+  PawPrint,
   Popcorn,
   Puzzle,
+  ShieldBan,
   ShoppingBag,
   Sparkles,
   Sun,
@@ -157,6 +166,7 @@ export default function Home() {
             <a href="#lineup">על הבמה</a>
             <a href="#activities">מה קורה</a>
             <a href="#know">טוב לדעת</a>
+            <a href="#access">נגישות</a>
           </nav>
 
           <div className="header-actions">
@@ -548,6 +558,120 @@ export default function Home() {
                 <CalendarPlus aria-hidden="true" />
                 הוספה ליומן
               </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Accessibility & entry rules ---------------------------------- */}
+        <section className="section access" id="access" aria-labelledby="access-title">
+          <div className="container">
+            <header className="section-head access-head" data-reveal="sequence">
+              <p className="eyebrow" style={vars({ '--dot': 'var(--teal)' })}>
+                נגישות
+              </p>
+              <h2 id="access-title" className="section-title section-title--sm">
+                סדרי נגישות וכללי כניסה לאירוע
+              </h2>
+              <p className="section-lead">
+                להלן הסדרי הנגישות וכללי הכניסה לאירוע ״סוכות באגם״ בפארק נחל באר
+                שבע, שיתקיים ביום שלישי, י״ח בתשרי תשפ״ז,{' '}
+                <span dir="ltr">29.9.26</span>, בין השעות{' '}
+                <span dir="ltr">10:00–14:00</span>.
+              </p>
+            </header>
+
+            <div className="access-grid">
+              <article
+                className="access-card"
+                data-reveal
+                style={vars({ '--tint': 'var(--tint-teal)', '--chip': 'var(--teal)' })}
+              >
+                <h3>
+                  <span className="access-chip" aria-hidden="true">
+                    <Accessibility />
+                  </span>
+                  הסדרי נגישות
+                </h3>
+                <p>
+                  עיריית באר שבע פועלת בהתאם לחוק שוויון זכויות לאנשים עם מוגבלות,
+                  התשנ״ח–<span dir="ltr">1998</span>, ומחויבת להנגשת האירוע לכלל
+                  האוכלוסייה.
+                </p>
+                <ul className="access-list">
+                  <li>
+                    <span className="access-chip access-chip--sm" aria-hidden="true">
+                      <CircleParking />
+                    </span>
+                    <span>במקום קיימות חניות נכים, שירותי נכים מוסדרים ודרכי גישה סלולות.</span>
+                  </li>
+                  <li>
+                    <span className="access-chip access-chip--sm" aria-hidden="true">
+                      <Ear />
+                    </span>
+                    <span>באירוע המרכזי יופעלו מערכות עזר לשמיעה.</span>
+                  </li>
+                </ul>
+              </article>
+
+              <article
+                className="access-card"
+                data-reveal
+                style={vars({ '--tint': 'var(--tint-orange)', '--chip': 'var(--orange)' })}
+              >
+                <h3>
+                  <span className="access-chip" aria-hidden="true">
+                    <Ban />
+                  </span>
+                  כללי כניסה לאירוע
+                </h3>
+                <ul className="access-list">
+                  <li>
+                    <span className="access-chip access-chip--sm" aria-hidden="true">
+                      <Armchair />
+                    </span>
+                    <span>אין כניסה עם מחצלות וכיסאות.</span>
+                  </li>
+                  <li>
+                    <span className="access-chip access-chip--sm" aria-hidden="true">
+                      <ShieldBan />
+                    </span>
+                    <span>אין כניסה עם נשק ארוך.</span>
+                  </li>
+                  <li>
+                    <span className="access-chip access-chip--sm" aria-hidden="true">
+                      <PawPrint />
+                    </span>
+                    <span>
+                      אין כניסה לבעלי חיים, למעט בעלי חיים שהכנסתם מאושרת בהתאם להוראות
+                      ולדין.
+                    </span>
+                  </li>
+                  <li>
+                    <span className="access-chip access-chip--sm" aria-hidden="true">
+                      <Bike />
+                    </span>
+                    <span>
+                      אין כניסה עם אמצעי ניידות ורכיבה כגון אופניים, קורקינטים, קורקינטים
+                      חשמליים וכדומה. הגבלה זו אינה חלה על אמצעי ניידות המשמשים אדם עם
+                      מוגבלות.
+                    </span>
+                  </li>
+                </ul>
+              </article>
+
+              <p className="access-contact" data-reveal>
+                <span className="access-chip" aria-hidden="true">
+                  <Mail />
+                </span>
+                <span>
+                  אם נדרשת עבורך התאמת נגישות מיוחדת, ניתן לפנות עד יום חמישי, י״ג בתשרי
+                  תשפ״ז, <span dir="ltr">24.9.26</span>, בשעה{' '}
+                  <span dir="ltr">10:00</span>, באמצעות דוא״ל:{' '}
+                  <a href="mailto:mokedcrm@br7.org.il" dir="ltr">
+                    mokedcrm@br7.org.il
+                  </a>
+                </span>
+              </p>
             </div>
           </div>
         </section>
